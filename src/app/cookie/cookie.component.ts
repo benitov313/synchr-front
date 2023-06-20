@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from './cookie.service';
+import { CookieService } from '../cookie.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass'],
+  selector: 'app-cookie',
+  templateUrl: './cookie.component.html',
+  styleUrls: ['./cookie.component.sass'],
 })
-export class AppComponent implements OnInit {
+export class CookieComponent implements OnInit {
   constructor(public cookieService: CookieService) {}
+
   ngOnInit(): void {
     this.getCookie();
   }
@@ -17,5 +18,4 @@ export class AppComponent implements OnInit {
       console.log('mi cookie');
     });
   }
-  title = 'auth-app';
 }
